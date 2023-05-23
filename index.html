@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SQFT</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__inner">
+            <div class="container">
+               <nav class="menu">
+                  <div class="menu__top">
+                     <ul class="menu__top-list">
+                        <li class="menu__item">
+                           <p>Главная</p>
+                        </li>
+                        <li class="menu__item">
+                           <p>О нас</p>
+                           <ul class="menu__item-submenu">
+                              <li>
+                                  <a href="#">контакты</a>
+                              </li>
+                              <li>
+                                  <a href="#">О нас</a>
+                                  <ul class="menu__item-submenu">
+                                      <li>
+                                          <a href="#">ТЕСТ</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">ТЕСТ</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">ТЕСТ</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#">ТЕСТ</a>
+                              </li>
+                          </ul>
+
+                        </li>
+                        <li class="menu__item">
+                           <p>Недвижимость</p>
+                        </li>
+                        <li class="menu__item menu__item-logo">
+                           <a class="logo" href="#">
+                              <img class="logo__img" src="images/logo.svg" alt="sqft-logo">
+
+                              <h1 class="logo__text">
+                                 sqft
+                              </h1>
+                           </a>
+                        </li>
+                        <li class="menu__item">
+                           <p>услуги</p>
+                        </li>
+                        <li class="menu__item">
+                           <p>для инвесторов</p>
+                           <ul class="menu__item-submenu">
+                              <li>
+                                  <a href="#">контакты</a>
+                              </li>
+                              <li>
+                                  <a href="#">О нас</a>
+                              </li>
+                              <li>
+                                  <a href="#">ТЕСТ</a>
+                              </li>
+                          </ul>
+                        </li>
+                        <li class="menu__item">
+                           <a href="#">
+                              <p>Новости</p>
+                           </a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="#">
+                              <p>ENG</p>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="menu__bottom">
+                     <ul class="menu__bottom-list">
+                        <li class="menu__item menu__item-media">
+                           <a href="#" class="media__link">
+                              <img class="menu__item-media--img" src="images/instagram.svg" alt="instagram-icon">
+                           </a>
+                           <a href="#" class="media__link">
+                              <img class="menu__item-media--img" src="images/telegram.svg" alt="telegram-icon">
+                           </a>
+                           <a href="#" class="media__link">
+                              <img class="menu__item-media--img" src="images/youtube.svg" alt="youtube-icon">
+                           </a>
+                        </li>
+                        <li class="menu__item">
+                           <button class="menu__contact-btn">
+                              Обратный звонок
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </header>
+      
+      <div class="call ">
+         <div class="call__inner">
+             <h4 class="call__title">
+                 Закажите звонок
+             </h4>
+             <div class="call__text">
+                 Мы перезвоним вам в ближайшее время
+             </div>
+             <form action="POST" class="call__form">
+                 <div class="call__form-input">
+                     <input type="text" placeholder="Ваше имя">
+                 </div>
+                 <div class="call__form-input call__form-input-number">
+                     <input class="input-number" type="number" placeholder="39 093 01903">
+                 </div>
+                 <p class="call__form-accept">
+                     Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно Политики
+                     конфиденциальности компании
+                 </p>
+                 <button class="call__form-btn" type="submit">Заказать Звонок</button>
+             </form>
+             <div class="call__close-btn">
+                 <img src="images/close-btn.svg" alt="close">
+             </div>
+         </div>
+     </div>
+
+<main>
+    <section class="main-screen">
+        <div class="main-screen__inner">
+            <div class="container">
+                <div class="main-screen__wrapper">
+
+                    <div class="main-screen__top-dots">
+                        <button class="main-screen__dot main-screen__dot--active" data-button="content-1">01</button>
+                        <button class="main-screen__dot" data-button="content-2">02</button>
+                        <button class="main-screen__dot" data-button="content-3">03</button>
+                    </div>
+                    <div class="main-screen__bottom-dots">
+                        <button class="main-screen__dot" data-button="content-4">04</button>
+                        <button class="main-screen__dot" data-button="content-5">05</button>
+                        <button class="main-screen__dot" data-button="content-6">06</button>
+                    </div>
+
+                    <div class="main-screen__item main-screen__item--active" id="content-1">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>01</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+                    <div class="main-screen__item" id="content-2">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>02</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+                    <div class="main-screen__item" id="content-3">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>03</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+                    <div class="main-screen__item" id="content-4">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>04</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+                    <div class="main-screen__item" id="content-5">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>05</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+                    <div class="main-screen__item" id="content-6">
+                        <div class="main-screen__content">
+                            <h3 class="main-screen__content-title">
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                <span>06</span>
+                            </h3>
+                            <p class="main-screen__content-text">
+                                Работаем с лучшими застройщиками
+                                Гарантируем годовую доходность объектов от 6-12% <br>
+                                Комиссия 0%
+                            </p>
+                        </div>
+                        <div class="main-screen__bottom">
+                            <p class="main-screen__bottom-text">
+                                Наши специалисты подберут Вам идеальное предложение
+                            </p>
+                            <button class="main-screen__bottom-btn">Подобрать</button>
+                        </div>
+                    </div>
+
+
+                    <div class="main-screen__media">
+                        <a class="main-screen__media-img" href="#" href="#" class="main-screen__media-link">
+                            <img src="images/chat.svg" alt="">
+                        </a>
+                        <a class="main-screen__media-img" href="#" class="main-screen__media-link">
+                            <img src="images/whatsapp.svg" alt="" href="#">
+                        </a>
+                        <a class="main-screen__media-img" href="#" class="main-screen__media-link">
+                            <img src="images/telegram.svg" alt="" href="#">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDER -->
+
+    <section class="slider">
+        <div class="slider__wrapper">
+            <!-- FIRST SLIDE -->
+            <div class="slider__item slider__item--first">
+                <div class="container">
+                    <div class="first-slide__inner">
+                        <img class="first-slide__img" src="images/first-slide-img.svg" alt="airplane-icon">
+                        <h2 class="first-slide__title">
+                            Исследуй Страны
+                        </h2>
+                        <p class="first-slide__text">
+                            Узнай больше информации про лучшие страны для жизни и инвестирования.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- TURCKIEY -->
+            <div class="slider__item slider__item--turkey">
+                <div class="container">
+                    <div class="slider__inner">
+                        <div class="slider__title">
+                            <br>
+                            Турция
+                        </div>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <button class="slider__btn">
+                            Узнать больше
+                        </button>
+                        <div class="slider__gallery">
+                            <div class="slider__gallery-item active">
+                                <div class="slider__gallery-img-box dot-1">
+                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <span>
+                                        Турция
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item">
+                                <div class="slider__gallery-img-box dot-2">
+                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <span>
+                                        Бали
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item">
+                                <div class="slider__gallery-img-box dot-3">
+                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <span>
+                                        Объединённые Арабские Эмираты
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BALI -->
+            <div class="slider__item slider__item--bali">
+                <div class="container">
+                    <div class="slider__inner">
+                        <div class="slider__title">
+                            <br>
+                            Бали
+
+                        </div>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <button class="slider__btn">
+                            Узнать больше
+                        </button>
+                        <div class="slider__gallery">
+                            <div class="slider__gallery-item ">
+                                <div class="slider__gallery-img-box dot-1">
+                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <span>
+                                        Турция
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item active">
+                                <div class="slider__gallery-img-box  dot-2">
+                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <span>
+                                        Бали
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item">
+                                <div class="slider__gallery-img-box  dot-3">
+                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <span>
+                                        Объединённые Арабские Эмираты
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EMIRATES -->
+            <div class="slider__item slider__item--emirates">
+                <div class="container">
+                    <div class="slider__inner">
+                        <div class="slider__title">
+                            Объединённые Арабские Эмираты
+                        </div>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <p class="slider__text">
+                            Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
+                            interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra, per inceptos himenaeos.
+                        </p>
+                        <button class="slider__btn">
+                            Узнать больше
+                        </button>
+                        <div class="slider__gallery">
+                            <div class="slider__gallery-item">
+                                <div class="slider__gallery-img-box dot-1">
+                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <span>
+                                        Турция
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item">
+                                <div class="slider__gallery-img-box dot-2">
+                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <span>
+                                        Бали
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slider__gallery-item active">
+                                <div class="slider__gallery-img-box dot-3">
+                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <span>
+                                        Объединённые Арабские Эмираты
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTINGS -->
+    <section class="listings">
+
+        <div class="listings__block">
+            <div class="container">
+                <h3 class="listings__title listings__title--turk">
+                    турция
+                </h3>
+            </div>
+
+            <div class="listings__box">
+                <!-- LISTING ITEMS -->
+                <div class="listings__item ">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+
+                <div class="listings__item">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+                <div class="listings__item">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+                <div class="listings__item">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+                <div class="listings__item">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+                <div class="listings__item">
+                    <div class="listings__item-img">
+                        <img src="images/listings-content.avif">
+                        <div class="listings__item-img-descr">
+                            <p class="listings__item-img-location">
+                                Турция , Алания
+                            </p>
+                            <p class="listings__item-img-date">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="listings__item-price">
+                        235 000 - 559 000
+                    </p>
+                    <p class="listings__item-text">
+                        Новые Роскошные Апартаменты
+                    </p>
+                    <p class="listings__item-type">
+                        Квартири
+                    </p>
+                    <p class="listings__item-rooms">
+                        1 спальня , 2 спальни , 2+1 пентхаус
+                    </p>
+                    <p class="listings__item-square">
+                        60 м - 170 м
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="listings__block">
+            <div class="listings-container">
+                <div class="container">
+                    <h3 class="listings__title listings__title--bali">
+                        Бали
+                    </h3>
+                </div>
+                <div class="listings__box">
+                    <!-- LISTING ITEMS -->
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square" data-price="">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form class="listings__form" method="POST">
+                <h4 class="listings__form-title">
+                    Хотите получить помощь в подборе недвижимости?
+                </h4>
+                <p class="listings__form-text">
+                    Заполните короткую заявку и мы перезвоним вам в течение 1 часа
+                </p>
+                <div class="listings__form-input-inner">
+                    <div class="listings__form-input">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="listings__form-input  listings__form-input-number">
+                        <input class="input-number" type="number" placeholder="39 093 01903">
+                    </div>
+                    <div class="listings__form-input">
+                        <input type="email" placeholder="Почта">
+                    </div>
+                </div>
+
+
+                <p class="listings__form-accept">
+                    Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно <a href="#"
+                        class="listings__form-text-link">Политики конфиденциальности компании</a>
+                </p>
+                <button class="listings__form-btn" type="submit">Заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="listings__block">
+            <div class="listings-container">
+                <div class="container">
+                    <h3 class="listings__title listings__title--emirates">
+                        Дубай
+                    </h3>
+                </div>
+
+                <div class="listings__box">
+                    <!-- LISTING ITEMS -->
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- REVIEWS -->
+    <section class="reviews">
+
+        <div class="reviews__text">
+            <p class="reviews__text-top">
+                Более
+            </p>
+            <p class="reviews__text-center">
+                97%
+            </p>
+
+            <p class="reviews__text-bottom">
+                Клиентов довольны покупкой недвижимости вместе с нами
+            </p>
+        </div>
+        <div class="reviews__slider">
+            <div class="reviews__item">
+                <div class="reviews__item-inner">
+                    <div class="reviews__item-stars">
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                    </div>
+                    <p class="reviews__item-text">
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint.
+                    </p>
+                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
+                    <p class="reviews__item-name">
+                        Van Nga <br>
+                        <span>
+                            CyberFin Co. Ltd
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__item-inner">
+                    <div class="reviews__item-stars">
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                    </div>
+                    <p class="reviews__item-text">
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint.
+                    </p>
+                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
+                    <p class="reviews__item-name">
+                        Van Nga <br>
+                        <span>
+                            CyberFin Co. Ltd
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__item-inner">
+                    <div class="reviews__item-stars">
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                    </div>
+                    <p class="reviews__item-text">
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint.
+                    </p>
+                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
+                    <p class="reviews__item-name">
+                        Van Nga <br>
+                        <span>
+                            CyberFin Co. Ltd
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__item-inner">
+                    <div class="reviews__item-stars">
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                    </div>
+                    <p class="reviews__item-text">
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint.
+                    </p>
+                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
+                    <p class="reviews__item-name">
+                        Van Nga <br>
+                        <span>
+                            CyberFin Co. Ltd
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__item-inner">
+                    <div class="reviews__item-stars">
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                        <div class="reviews__item-star"></div>
+                    </div>
+                    <p class="reviews__item-text">
+                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                        sint.
+                    </p>
+                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
+                    <p class="reviews__item-name">
+                        Van Nga <br>
+                        <span>
+                            CyberFin Co. Ltd
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ASSISTANCE BLOCK -->
+
+    <section class="assistance">
+        <div class="container">
+            <div class="assistance__inner">
+                <div class="assistance__large-box">
+                    <div class="assistance__content">
+                        <h5 class="assistance__title">
+                            Вы решили в какой стране планируете приобрести недвижимость?
+                        </h5>
+                        <p class="assistance__subtitle">
+                            Выберите один или несколько
+                        </p>
+                        <div class="assistance__form-inner">
+                            <form action="POST" class="assistance__form">
+                                <div class="assistance__form-step" id="step1">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option1"
+                                            value="option1">
+                                        <label for="step1_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option2"
+                                            value="option2">
+                                        <label for="step1_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option3"
+                                            value="option3">
+                                        <label for="step1_option3">Опция 3</label><br>
+                                    </div>
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 1 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step1', 'step2')">Далее</button>
+                                </div>
+
+                                <div class="assistance__form-step" id="step2" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option1"
+                                            value="option1">
+                                        <label for="step2_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option2"
+                                            value="option2">
+                                        <label for="step2_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option3"
+                                            value="option3">
+                                        <label for="step2_option3">Опция 3</label><br>
+                                    </div>
+
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 2 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step2', 'step3')">Далее</button>
+                                </div>
+
+                                <div class="assistance__form-step" id="step3" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option1"
+                                            value="option1">
+                                        <label for="step3_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option2"
+                                            value="option2">
+                                        <label for="step3_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option3"
+                                            value="option3">
+                                        <label for="step3_option3">Опция 3</label><br>
+                                    </div>
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 3 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step3', 'step4')">Далее</button>
+                                </div>
+
+                                <div class="assistance__form-step" id="step4" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option1"
+                                            value="option1">
+                                        <label for="step4_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option2"
+                                            value="option2">
+                                        <label for="step4_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option3"
+                                            value="option3">
+                                        <label for="step4_option3">Опция 3</label><br>
+                                    </div>
+
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 4 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step4', 'step5')">Далее</button>
+                                </div>
+
+                                <div class="assistance__form-step" id="step5" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option1"
+                                            value="option1">
+                                        <label for="step5_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option2"
+                                            value="option2">
+                                        <label for="step5_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option3"
+                                            value="option3">
+                                        <label for="step5_option3">Опция 3</label><br>
+                                    </div>
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 5 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step5', 'step6')">Далее</button>
+                                </div>
+                                <div class="assistance__form-step" id="step6" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option1"
+                                            value="option1">
+                                        <label for="step6_option1">Опция 1</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option2"
+                                            value="option2">
+                                        <label for="step6_option2">Опция 2</label><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option3"
+                                            value="option3">
+                                        <label for="step6_option3">Опция 3</label><br>
+                                    </div>
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 6 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step6', 'step7')">Далее</button>
+                                </div>
+
+                                <div class="assistance__form-step" id="step7" style="display: none;">
+                                    <div class="assistance__form-step-box">
+                                        <input type="text" name="name" id="name" required placeholder="Имя:"><br>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+
+                                        <input type="text" name="number" id="number" required placeholder="Номер:"><br>
+                                    </div>
+
+                                    <div class="assistance__form-progress">
+                                        <p class="assistance__form-progress-text">
+                                            Готово:
+                                            <span> 7 из 7</span>
+                                        </p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                        
+                                    </div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer class="footer">
+
+
+    <div class="container">
+
+
+        <div class="footer__top">
+
+
+            <a class="logo" href="#">
+
+
+                <img class="logo__img" src="images/logo.svg" alt="sqft-logo">
+
+
+                <h1 class="logo__text">
+
+
+                    sqft
+
+
+                </h1>
+
+
+            </a>
+
+
+            <div class="footer__media">
+
+
+                <a class="footer__media-link" href="#"><img class="footer__media-icon" src="images/youtube-b.svg"
+
+
+                        href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
+
+
+                        src="images/pinterest-b.svg" href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
+
+
+                        src="images/video-chat-b.svg" href="#" alt="media-icon ">
+
+
+                </a> <a class="footer__media-link" href ="#"><img class="footer__media-icon"
+
+
+                        src="images/telegram-b.svg" href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
+
+
+                        src="images/facebook-b.svg" href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
+
+
+                        src="images/instagram-b.svg" href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon" src="images/tiktok-b.svg"
+
+
+                        href="#" alt="media-icon">
+
+
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
+
+
+                        src="images/whatsapp-b.svg" href="#" alt="media-icon">
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer__bottom">
+
+
+            <div class="footer__item">
+
+
+                <ul class="footer__item-list">
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <div class="footer__item">
+
+
+                <ul class="footer__item-list">
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                    <li class="footer__item-link"><a href="#"> Недвижимость в Алании </a></li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <div class="footer__item">
+
+
+                <ul class="footer__item-contacts">
+
+
+                    <li class="footer__item-contact"><a href="tel:+18003806929">+1 (800) 380 69 29</a></li>
+
+
+                    <li class="footer__item-contact"><a href="mailto:hello@sq-fts.com">hello@sq-fts.com</a></li>
+
+
+                    <li class="footer__item-contact"><a href="#">United States, 3600 Barham blvd, Los Angeles, Ca,
+
+
+                            90068</a></li>
+
+
+                    <li class="footer__item-contact"><a href="#">Turkey, Oba Mah, Metro Kavşağı, Çevre Yolu Cd. D:No 21
+
+
+                            Residence street 21</a></li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <p class="footer__copyright">
+
+
+        © Copyright © 2021-2023 Square Feet LLC.
+
+
+    </p>
+
+
+</footer>
+
+
+</div>
+
+
+
+
+
+<script src="js/main.min.js"></script>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
