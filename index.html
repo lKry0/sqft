@@ -15,72 +15,78 @@
 
 <body>
    <div class="wrapper">
-      <header class="header">
+      <header class="header" id="header">
          <div class="header__inner">
             <div class="container">
+
                <nav class="menu">
+
                   <div class="menu__top">
                      <ul class="menu__top-list">
-                        <li class="menu__item">
-                           <p>Главная</p>
+                        <li class="menu__item nav-main">
+                           <a href="index.html">Главная</a>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item nav-about">
                            <p>О нас</p>
                            <ul class="menu__item-submenu">
                               <li>
-                                  <a href="#">контакты</a>
+                                 <a href="../contacts.html">контакты</a>
                               </li>
                               <li>
-                                  <a href="#">О нас</a>
-                                  <ul class="menu__item-submenu">
-                                      <li>
-                                          <a href="#">ТЕСТ</a>
-                                      </li>
-                                      <li>
-                                          <a href="#">ТЕСТ</a>
-                                      </li>
-                                      <li>
-                                          <a href="#">ТЕСТ</a>
-                                      </li>
-                                  </ul>
+                                 <a href="../about.html">О нас</a>
                               </li>
-                              <li>
-                                  <a href="#">ТЕСТ</a>
-                              </li>
-                          </ul>
+                           </ul>
 
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item nav-immovables">
                            <p>Недвижимость</p>
+                           <ul class="menu__item-submenu">
+                              <li>
+                                 <a href="#">Турция</a>
+                                 <ul class="menu__item-submenu">
+                                    <li>
+                                       <a href="#">Алания</a>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
                         </li>
                         <li class="menu__item menu__item-logo">
-                           <a class="logo" href="#">
-                              <img class="logo__img" src="images/logo.svg" alt="sqft-logo">
+                           <a class="logo" href="index.html">
+                              <img class="logo__img" src="../images/logo.svg" alt="sqft-logo">
 
                               <h1 class="logo__text">
                                  sqft
                               </h1>
                            </a>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item nav-services">
                            <p>услуги</p>
+                           <ul class="menu__item-submenu">
+                              <li>
+                                 <a href="turkey-tour.html">ОЗНАКОМИТЕЛЬНЫЙ ТУР</a>
+                              </li>
+                              <li>
+                                 <a href="online-view.html">ОНЛАЙН-ПРОСМОТР</a>
+                              </li>
+                              <li>
+                                 <a href="remote-buy.html">ДИСТАНЦИОННАЯ ПОКУПКА</a>
+                              </li>
+                              <li>
+                                 <a href="resident-card.html">Получение вида на жительство</a>
+                              </li>
+                           </ul>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item nav-investments">
                            <p>для инвесторов</p>
                            <ul class="menu__item-submenu">
                               <li>
-                                  <a href="#">контакты</a>
+                                 <a href="investments.html">инвестиции</a>
                               </li>
-                              <li>
-                                  <a href="#">О нас</a>
-                              </li>
-                              <li>
-                                  <a href="#">ТЕСТ</a>
-                              </li>
-                          </ul>
+                           </ul>
                         </li>
-                        <li class="menu__item">
-                           <a href="#">
+                        <li class="menu__item nav-news">
+                           <a href="news.html">
                               <p>Новости</p>
                            </a>
                         </li>
@@ -96,13 +102,32 @@
                      <ul class="menu__bottom-list">
                         <li class="menu__item menu__item-media">
                            <a href="#" class="media__link">
-                              <img class="menu__item-media--img" src="images/instagram.svg" alt="instagram-icon">
+                              <svg fill="none" viewBox="0 0 32 32" id="instagram" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M22 3H10a7.007 7.007 0 0 0-7 7v12a7.008 7.008 0 0 0 7 7h12a7.008 7.008 0 0 0 7-7V10a7.008 7.008 0 0 0-7-7zm-6 19a6 6 0 1 1 6-6 6.006 6.006 0 0 1-6 6zm7.5-12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"
+                                    fill="#fff" />
+                              </svg>
                            </a>
                            <a href="#" class="media__link">
-                              <img class="menu__item-media--img" src="images/telegram.svg" alt="telegram-icon">
+                              <svg fill="none" viewBox="0 0 32 32" id="telegram" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.001 2.667C8.641 2.667 2.668 8.64 2.668 16s5.973 13.334 13.333 13.334S29.335 23.36 29.335 16C29.335 8.64 23.36 2.667 16 2.667zm6.187 9.067c-.2 2.106-1.067 7.226-1.507 9.586-.186 1-.56 1.334-.906 1.374-.774.066-1.36-.507-2.107-1-1.173-.774-1.84-1.254-2.973-2-1.32-.867-.467-1.347.293-2.12.2-.2 3.613-3.307 3.68-3.587a.268.268 0 0 0-.067-.24c-.08-.067-.186-.04-.28-.027-.12.027-1.986 1.267-5.626 3.72-.534.36-1.014.547-1.44.534-.48-.014-1.387-.267-2.067-.494-.84-.266-1.493-.413-1.44-.88.027-.24.36-.48.987-.733 3.893-1.693 6.48-2.813 7.773-3.347 3.707-1.546 4.467-1.813 4.973-1.813.107 0 .36.027.52.16a.53.53 0 0 1 .187.36c-.013.08.013.32 0 .507z"
+                                    fill="#fff" />
+                              </svg>
                            </a>
                            <a href="#" class="media__link">
-                              <img class="menu__item-media--img" src="images/youtube.svg" alt="youtube-icon">
+                              <svg fill="none" viewBox="0 0 32 32" id="youtube" xmlns="http://www.w3.org/2000/svg">
+                                 <g clip-path="url(#csa)">
+                                    <path
+                                       d="M16.102 3.998h.178c1.644.006 9.974.066 12.22.67a4.02 4.02 0 0 1 2.83 2.84c.202.76.344 1.766.44 2.804l.02.208.044.52.016.208c.13 1.828.146 3.54.148 3.914v.15c-.002.388-.02 2.216-.164 4.12l-.016.21-.018.208c-.1 1.144-.248 2.28-.47 3.116a4.014 4.014 0 0 1-2.83 2.84c-2.32.624-11.138.668-12.36.67h-.284c-.618 0-3.174-.012-5.854-.104l-.34-.012-.174-.008-.342-.014-.342-.014c-2.22-.098-4.334-.256-5.308-.52a4.014 4.014 0 0 1-2.83-2.838c-.222-.834-.37-1.972-.47-3.116l-.016-.21-.016-.208A62.799 62.799 0 0 1 0 15.36v-.246c.004-.43.02-1.916.128-3.556l.014-.206.006-.104.016-.208.044-.52.02-.208c.096-1.038.238-2.046.44-2.804a4.014 4.014 0 0 1 2.83-2.84c.974-.26 3.088-.42 5.308-.52l.34-.014.344-.012.172-.006.342-.014A201.44 201.44 0 0 1 15.716 4h.386v-.002zm-3.302 6.42v9.636l8.314-4.816-8.314-4.82z"
+                                       fill="#fff" />
+                                 </g>
+                                 <defs>
+                                    <clipPath id="csa">
+                                       <path fill="#fff" d="M0 0h32v32H0z" />
+                                    </clipPath>
+                                 </defs>
+                              </svg>
                            </a>
                         </li>
                         <li class="menu__item">
@@ -113,58 +138,435 @@
                      </ul>
                   </div>
                </nav>
+
+               <nav class="menu--mobile">
+                  <div class="menu__brg">
+                     <div class="menu__brg-line"></div>
+                     <div class="menu__brg-line"></div>
+                     <div class="menu__brg-line"></div>
+                  </div>
+                  <a class="logo logo--mobile" href="index.html">
+                     <img class="logo__img" src="../images/logo.svg" alt="sqft-logo">
+
+                     <h1 class="logo__text">
+                        sqft
+                     </h1>
+                  </a>
+               </nav>
+               <nav class="menu-window">
+                  <div class="menu-window__inner">
+                     <button class="menu-window__back-btn">
+                        Назад
+                     </button>
+                     <ul class="menu-window__list">
+
+                        <li class="menu-window__item">
+                           <a href="index.html" class="menu-window__link">Главная</a>
+                        </li>
+
+                        <li class="menu-window__item menu-item-about">
+                           <p class="menu-window__link" id="menu-item-about"> О нас</p>
+                           <ul class="menu-window__sublist">
+                              <li class="menu-window__sublist-item">
+                                 <a href="contacts.html" class="menu-window__sublist-link">Контакты</a>
+                              </li>
+                              <li class="menu-window__sublist-item">
+                                 <a href="about.html" class="menu-window__sublist-link">О нас</a>
+                              </li>
+                           </ul>
+                        </li>
+
+                        <li class="menu-window__item menu-item-immovables">
+                           <p class="menu-window__link" id="menu-item-immovables">Недвижимость</p>
+                           <ul class="menu-window__sublist">
+                              <li class="menu-window__sublist-item">
+                                 <a href="#" class="menu-window__sublist-link">Турция, Алания</a>
+                              </li>
+                           </ul>
+                        </li>
+
+                        <li class="menu-window__item menu-item-services">
+                           <p class="menu-window__link" id="menu-item-services">Услуги</p>
+                           <ul class="menu-window__sublist">
+                              <li class="menu-window__sublist-item">
+                                 <a href="turkey-tour.html" class="menu-window__sublist-link">Ознакомительный тур</a>
+                              </li>
+                              <li class="menu-window__sublist-item">
+                                 <a href="online-view.html" class="menu-window__sublist-link">Онлайн-просмотр</a>
+                              </li>
+                              <li class="menu-window__sublist-item">
+                                 <a href="remote-buy.html" class="menu-window__sublist-link">Дистанционная покупка</a>
+                              </li>
+                              <li class="menu-window__sublist-item">
+                                 <a href="resident-card.html" class="menu-window__sublist-link">Получение вида на
+                                    жительство</a>
+                              </li>
+                           </ul>
+                        </li>
+
+                        <li class="menu-window__item menu-item-investments">
+                           <p class="menu-window__link" id="menu-item-investments">Для инвесторов</p>
+                           <ul class="menu-window__sublist">
+                              <li class="menu-window__sublist-item">
+                                 <a href="investments.html" class="menu-window__sublist-link">Инвестиции</a>
+                              </li>
+                           </ul>
+                        </li>
+
+                        <li class="menu-window__item">
+                           <a href="news.html" class="menu-window__link">Новости</a>
+                        </li>
+
+                        <li class="menu-window__item">
+                           <a href="#" class="menu-window__link">EN</a>
+                        </li>
+
+                        <li class="menu-window__item">
+                           <a href="#" class="menu-window__link">RU</a>
+                        </li>
+
+                     </ul>
+                     <div class="menu-window__media">
+                        <div class="menu-window__media-row">
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 32" id="youtube" xmlns="http://www.w3.org/2000/svg">
+                                 <g clip-path="url(#csa)">
+                                    <path
+                                       d="M16.102 3.998h.178c1.644.006 9.974.066 12.22.67a4.02 4.02 0 0 1 2.83 2.84c.202.76.344 1.766.44 2.804l.02.208.044.52.016.208c.13 1.828.146 3.54.148 3.914v.15c-.002.388-.02 2.216-.164 4.12l-.016.21-.018.208c-.1 1.144-.248 2.28-.47 3.116a4.014 4.014 0 0 1-2.83 2.84c-2.32.624-11.138.668-12.36.67h-.284c-.618 0-3.174-.012-5.854-.104l-.34-.012-.174-.008-.342-.014-.342-.014c-2.22-.098-4.334-.256-5.308-.52a4.014 4.014 0 0 1-2.83-2.838c-.222-.834-.37-1.972-.47-3.116l-.016-.21-.016-.208A62.799 62.799 0 0 1 0 15.36v-.246c.004-.43.02-1.916.128-3.556l.014-.206.006-.104.016-.208.044-.52.02-.208c.096-1.038.238-2.046.44-2.804a4.014 4.014 0 0 1 2.83-2.84c.974-.26 3.088-.42 5.308-.52l.34-.014.344-.012.172-.006.342-.014A201.44 201.44 0 0 1 15.716 4h.386v-.002zm-3.302 6.42v9.636l8.314-4.816-8.314-4.82z"
+                                       fill="#fff" />
+                                 </g>
+                                 <defs>
+                                    <clipPath id="csa">
+                                       <path fill="#fff" d="M0 0h32v32H0z" />
+                                    </clipPath>
+                                 </defs>
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 33" id="pinterest" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M12.055 29.22c1.28.387 2.573.614 3.946.614A13.333 13.333 0 1 0 2.668 16.5c0 5.667 3.56 10.534 8.587 12.454-.12-1.04-.24-2.76 0-3.947l1.533-6.587s-.387-.773-.387-2c0-1.84 1.147-3.213 2.454-3.213 1.146 0 1.68.84 1.68 1.92 0 1.147-.76 2.787-1.147 4.36-.227 1.307.693 2.453 2.027 2.453 2.373 0 4.213-2.533 4.213-6.106 0-3.2-2.293-5.387-5.587-5.387-3.76 0-5.973 2.8-5.973 5.747 0 1.146.373 2.306.987 3.066.12.08.12.187.08.387l-.387 1.453c0 .227-.147.307-.373.147-1.707-.747-2.694-3.173-2.694-5.133 0-4.214 2.987-8.04 8.747-8.04 4.587 0 8.16 3.293 8.16 7.666 0 4.587-2.84 8.267-6.907 8.267-1.293 0-2.56-.693-3.013-1.507l-.893 3.16c-.307 1.147-1.147 2.68-1.72 3.6v-.04z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 32" id="chat" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M10.668 18.667h8c.378 0 .695-.128.95-.384a1.28 1.28 0 0 0 .383-.95v-2.666l1.534 1.533c.2.2.438.25.716.151.277-.1.416-.305.417-.617v-4.8c0-.311-.14-.517-.417-.616-.279-.1-.517-.05-.716.149L20 12V9.334c0-.378-.127-.695-.382-.951a1.284 1.284 0 0 0-.95-.383h-8c-.378 0-.695.128-.95.384a1.285 1.285 0 0 0-.383.95v8c0 .377.128.694.384.95s.572.384.949.383zm-8 7.433V5.334c0-.734.261-1.362.784-1.884a2.563 2.563 0 0 1 1.883-.783h21.333a2.57 2.57 0 0 1 1.884.784c.523.523.784 1.15.783 1.883v16c0 .733-.262 1.361-.784 1.884a2.563 2.563 0 0 1-1.883.782H8.001l-3.066 3.067c-.423.422-.906.517-1.451.284-.545-.233-.817-.65-.816-1.25z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 32" id="telegram" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.001 2.667C8.641 2.667 2.668 8.64 2.668 16s5.973 13.334 13.333 13.334S29.335 23.36 29.335 16C29.335 8.64 23.36 2.667 16 2.667zm6.187 9.067c-.2 2.106-1.067 7.226-1.507 9.586-.186 1-.56 1.334-.906 1.374-.774.066-1.36-.507-2.107-1-1.173-.774-1.84-1.254-2.973-2-1.32-.867-.467-1.347.293-2.12.2-.2 3.613-3.307 3.68-3.587a.268.268 0 0 0-.067-.24c-.08-.067-.186-.04-.28-.027-.12.027-1.986 1.267-5.626 3.72-.534.36-1.014.547-1.44.534-.48-.014-1.387-.267-2.067-.494-.84-.266-1.493-.413-1.44-.88.027-.24.36-.48.987-.733 3.893-1.693 6.48-2.813 7.773-3.347 3.707-1.546 4.467-1.813 4.973-1.813.107 0 .36.027.52.16a.53.53 0 0 1 .187.36c-.013.08.013.32 0 .507z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                        </div>
+
+                        <div class="menu-window__media-row">
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 33" id="facebook" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M29.335 16.5C29.335 9.14 23.36 3.167 16 3.167 8.641 3.167 2.668 9.14 2.668 16.5c0 6.454 4.587 11.827 10.667 13.067V20.5h-2.667v-4h2.667v-3.333A4.672 4.672 0 0 1 18 8.5h3.334v4h-2.667c-.733 0-1.333.6-1.333 1.334V16.5h4v4h-4v9.267c6.733-.667 12-6.347 12-13.267z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 32" id="instagram" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M22 3H10a7.007 7.007 0 0 0-7 7v12a7.008 7.008 0 0 0 7 7h12a7.008 7.008 0 0 0 7-7V10a7.008 7.008 0 0 0-7-7zm-6 19a6 6 0 1 1 6-6 6.006 6.006 0 0 1-6 6zm7.5-12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 33" id="tiktok" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M22.134 8.26A5.704 5.704 0 0 1 20.72 4.5H16.6v16.533a3.457 3.457 0 0 1-3.453 3.334A3.477 3.477 0 0 1 9.68 20.9c0-2.293 2.213-4.013 4.494-3.307V13.38c-4.6-.613-8.627 2.96-8.627 7.52 0 4.44 3.68 7.6 7.587 7.6 4.186 0 7.586-3.4 7.586-7.6v-8.387a9.8 9.8 0 0 0 5.733 1.84v-4.12s-2.506.12-4.32-1.973z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+                           <a class="media__link" href="#">
+                              <svg fill="none" viewBox="0 0 32 32" id="whatsapp" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.001 2.667c7.364 0 13.334 5.97 13.334 13.333 0 7.364-5.97 13.334-13.334 13.334a13.272 13.272 0 0 1-6.706-1.807l-6.622 1.807 1.803-6.624A13.27 13.27 0 0 1 2.668 16c0-7.364 5.97-13.333 13.333-13.333zm-4.544 7.067-.266.01a1.28 1.28 0 0 0-.496.134 1.722 1.722 0 0 0-.392.304c-.16.15-.251.281-.348.408a3.64 3.64 0 0 0-.755 2.237c.003.653.173 1.29.44 1.884.545 1.203 1.443 2.476 2.627 3.656.285.284.565.57.866.835a12.6 12.6 0 0 0 5.12 2.728l.758.116c.246.013.493-.006.741-.018.388-.02.768-.125 1.11-.308a6.42 6.42 0 0 0 .511-.293s.058-.037.167-.12c.18-.133.29-.228.44-.384.11-.115.207-.25.28-.403.104-.217.208-.632.25-.977.033-.264.023-.408.02-.497-.006-.143-.125-.291-.254-.354l-.776-.348s-1.16-.505-1.87-.828a.663.663 0 0 0-.234-.054.642.642 0 0 0-.504.169c-.007-.003-.096.073-1.06 1.241a.466.466 0 0 1-.49.174 1.91 1.91 0 0 1-.255-.088c-.166-.07-.223-.096-.336-.144a8.033 8.033 0 0 1-2.1-1.338c-.168-.146-.324-.306-.484-.461a8.396 8.396 0 0 1-1.36-1.69l-.079-.127a1.233 1.233 0 0 1-.136-.274c-.05-.196.081-.353.081-.353s.324-.355.475-.547c.147-.186.27-.368.35-.497.158-.253.207-.513.125-.715-.374-.912-.76-1.82-1.158-2.721-.078-.179-.312-.307-.524-.332a5.91 5.91 0 0 0-.216-.021 4.512 4.512 0 0 0-.537.005l.268-.01h.001z"
+                                    fill="#fff" />
+                              </svg>
+                           </a>
+
+                        </div>
+                     </div>
+                     <button class="menu__contact-btn">
+                        Обратный звонок
+                     </button>
+                  </div>
+               </nav>
+
             </div>
          </div>
       </header>
-      
+
       <div class="call ">
          <div class="call__inner">
-             <h4 class="call__title">
-                 Закажите звонок
-             </h4>
-             <div class="call__text">
-                 Мы перезвоним вам в ближайшее время
-             </div>
-             <form action="POST" class="call__form">
-                 <div class="call__form-input">
-                     <input type="text" placeholder="Ваше имя">
-                 </div>
-                 <div class="call__form-input call__form-input-number">
-                     <input class="input-number" type="number" placeholder="39 093 01903">
-                 </div>
-                 <p class="call__form-accept">
-                     Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно Политики
-                     конфиденциальности компании
-                 </p>
-                 <button class="call__form-btn" type="submit">Заказать Звонок</button>
-             </form>
-             <div class="call__close-btn">
-                 <img src="images/close-btn.svg" alt="close">
-             </div>
+            <h4 class="call__title">
+               Закажите звонок
+            </h4>
+            <div class="call__text">
+               Мы перезвоним вам в ближайшее время
+            </div>
+            <form action="POST" class="call__form">
+               <input class="call__form-input" type="text" placeholder="Ваше имя">
+               <div class="call__form-input-box">
+                  <input class="call__form-input call__form-input-number" type="number" placeholder="39 093 01903">
+               </div>
+               <p class="call__form-accept">
+                  Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно Политики
+                  конфиденциальности компании
+               </p>
+               <button class="call__form-btn" type="submit">Заказать Звонок</button>
+            </form>
+            <div class="call__close-btn">
+               <img src="../images/close-btn.svg" alt="close">
+            </div>
          </div>
-     </div>
+      </div>
+      <div class="assistance__popup">
+         <div class="assistance" id="assistance">
+            <div class="assistance__inner">
+               <div class="assistance__large-box">
+                  <div class="assistance__content">
+                     <h5 class="assistance__title">
+                        Вы решили в какой стране планируете приобрести недвижимость?
+                     </h5>
+                     <p class="assistance__subtitle">
+                        Выберите один или несколько
+                     </p>
+                     <div class="assistance__form-inner">
+                        <form id="multiStepForm">
+                           <!-- Step 1-->
+                           <div class="step step1 active">
+
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Sports
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Technology
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Travel
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>1 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn step1-btn">Next</button>
+                           </div>
+
+                           <!-- Step 2-->
+                           <div class="step step2">
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Sports
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span></label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Technology
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span></label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Travel
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span></label>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>2 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn step2-btn" ">Далее</button>
+                                    </div>
+      
+                                    <!-- Step 3-->
+                                    <div class=" step step3">
+
+                                 <div class="assistance__form-step-box">
+                                    <label class="assistance__form-container">Sports
+                                       <input type="checkbox">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </div>
+                                 <div class="assistance__form-step-box">
+                                    <label class="assistance__form-container">Technology
+                                       <input type="checkbox">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </div>
+                                 <div class="assistance__form-step-box">
+                                    <label class="assistance__form-container">Travel
+                                       <input type="checkbox">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </div>
+                                 <p class="assistance__form-progress-text">Шаг: <span>3 из 7</span></p>
+                                 <div class="assistance__form-progress-bar"></div>
+                                 <p class="assistance__form-text">
+                                    Предлагаем помощь в подборе недвижимости зарубежом
+                                 </p>
+                                 <button class="assistance__form-btn step3-btn">Далее</button>
+                           </div>
+                           <!-- Step 4-->
+                           <div class="step step4">
+
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Sports
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Technology
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Travel
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>4 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn step4-btn">Далее</button>
+                           </div>
+                           <!-- Step 5-->
+                           <div class="step step5">
+
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Sports
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Technology
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Travel
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>5 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn step5-btn">Далее</button>
+                           </div>
+                           <!-- Step 6-->
+                           <div class="step step6">
+
+
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Sports
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Technology
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <label class="assistance__form-container">Travel
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>6 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn step6-btn">Далее</button>
+                           </div>
+
+                           <!-- Step 7-->
+                           <div class="step step7">
+
+                              <div class="assistance__form-step-box">
+                                 <input class="assistance__form-step-input" type="text" placeholder="Name" required>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <input class="assistance__form-step-input" type="tel" placeholder="Telephone" required>
+                              </div>
+                              <div class="assistance__form-step-box">
+                                 <input class="assistance__form-step-input" type="email" placeholder="E-mail" required>
+                              </div>
+                              <p class="assistance__form-progress-text">Шаг: <span>7 из 7</span></p>
+                              <div class="assistance__form-progress-bar"></div>
+                              <p class="assistance__form-text">
+                                 Предлагаем помощь в подборе недвижимости зарубежом
+                              </p>
+                              <button class="assistance__form-btn" type="submit">Submit</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <img src="../images/close-btn.svg" alt="" class="assistance__popup-close-btn">
+               </div>
+
+            </div>
+         </div>
+
+      </div>
+
+
+<!-- ПЕРВЫЙ ЭКРАН -->
 
 <main>
-    <section class="main-screen">
+    <section class="main-screen screen-1">
         <div class="main-screen__inner">
             <div class="container">
                 <div class="main-screen__wrapper">
 
                     <div class="main-screen__top-dots">
-                        <button class="main-screen__dot main-screen__dot--active" data-button="content-1">01</button>
-                        <button class="main-screen__dot" data-button="content-2">02</button>
-                        <button class="main-screen__dot" data-button="content-3">03</button>
+                        <button class="main-screen__dot main-screen__dot--active" data-button="content-1"
+                            id="main-btn-1">01</button>
+                        <button class="main-screen__dot" data-button="content-6" id="main-btn-6">06</button>
+                        <button class="main-screen__dot" data-button="content-5" id="main-btn-5">05</button>
                     </div>
                     <div class="main-screen__bottom-dots">
-                        <button class="main-screen__dot" data-button="content-4">04</button>
-                        <button class="main-screen__dot" data-button="content-5">05</button>
-                        <button class="main-screen__dot" data-button="content-6">06</button>
+                        <button class="main-screen__dot" data-button="content-2" id="main-btn-2">02</button>
+                        <button class="main-screen__dot" data-button="content-3" id="main-btn-3">03</button>
+                        <button class="main-screen__dot" data-button="content-4" id="main-btn-4">04</button>
                     </div>
 
                     <div class="main-screen__item main-screen__item--active" id="content-1">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха
                                 <span>01</span>
                             </h3>
                             <p class="main-screen__content-text">
@@ -177,13 +579,13 @@
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn"><a href="#assistance">Подобрать</a></button>
                         </div>
                     </div>
                     <div class="main-screen__item" id="content-2">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Обширный каталог недвижимости в Турции, ОАЭ, Балии <br><br>
                                 <span>02</span>
                             </h3>
                             <p class="main-screen__content-text">
@@ -196,97 +598,100 @@
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn">
+                                <a href="#assistance">Подобрать</a>
+                            </button>
                         </div>
                     </div>
                     <div class="main-screen__item" id="content-3">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Нам доверяют и выбирают проводником в мир зарубежной недвижимости
                                 <span>03</span>
                             </h3>
                             <p class="main-screen__content-text">
-                                Работаем с лучшими застройщиками
-                                Гарантируем годовую доходность объектов от 6-12% <br>
-                                Комиссия 0%
+                                950 + довольных клиентов которые приобрели недвижимость c нами. <br> Присоединяйся к их
+                                числу уже сегодня!
                             </p>
                         </div>
                         <div class="main-screen__bottom">
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn"><a href="#assistance">Подобрать</a></button>
                         </div>
                     </div>
                     <div class="main-screen__item" id="content-4">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Легкость и <br> прозрачность <br> заключение сделки <br><br>
                                 <span>04</span>
                             </h3>
                             <p class="main-screen__content-text">
-                                Работаем с лучшими застройщиками
-                                Гарантируем годовую доходность объектов от 6-12% <br>
-                                Комиссия 0%
+                                21 день - средний цикл сделки. <br>
+                                Мы обеспечиваем профессиональное сопровождение. <br>
+                                При этом недвижимость можно приобрести удаленно.
                             </p>
                         </div>
                         <div class="main-screen__bottom">
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn"><a href="#assistance">Подобрать</a></button>
                         </div>
                     </div>
                     <div class="main-screen__item" id="content-5">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Помогаем получить за инвестиции Вид на жительство <br> <br>
                                 <span>05</span>
                             </h3>
                             <p class="main-screen__content-text">
-                                Работаем с лучшими застройщиками
-                                Гарантируем годовую доходность объектов от 6-12% <br>
-                                Комиссия 0%
+                                Данная услуга действует при покупке недвижимости в Турции. По другим направлениям с
+                                радостью проконсультируем.
                             </p>
                         </div>
                         <div class="main-screen__bottom">
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn"><a href="#assistance">Подобрать</a></button>
                         </div>
                     </div>
                     <div class="main-screen__item" id="content-6">
                         <div class="main-screen__content">
                             <h3 class="main-screen__content-title">
-                                Подбираем недвижимость за рубежом. Для инвестиций, жизни и отдыха.
+                                Мы консультируем покупателей зарубежной недвижимости <br> <br>
                                 <span>06</span>
                             </h3>
                             <p class="main-screen__content-text">
-                                Работаем с лучшими застройщиками
-                                Гарантируем годовую доходность объектов от 6-12% <br>
-                                Комиссия 0%
+                                Эксперты нашей компании более 6 лет на рынке зарубежной недвижимости. C радостью поможем
+                                вам в этом разобраться и выбрать лучший вариант.
                             </p>
                         </div>
                         <div class="main-screen__bottom">
                             <p class="main-screen__bottom-text">
                                 Наши специалисты подберут Вам идеальное предложение
                             </p>
-                            <button class="main-screen__bottom-btn">Подобрать</button>
+                            <button class="main-screen__bottom-btn"><a href="#assistance">Подобрать</a></button>
                         </div>
                     </div>
 
 
                     <div class="main-screen__media">
                         <a class="main-screen__media-img" href="#" href="#" class="main-screen__media-link">
-                            <img src="images/chat.svg" alt="">
+                            <img src="../images/chat.svg">
                         </a>
                         <a class="main-screen__media-img" href="#" class="main-screen__media-link">
-                            <img src="images/whatsapp.svg" alt="" href="#">
+                            <img src="../images/whatsapp.svg" href="#">
                         </a>
                         <a class="main-screen__media-img" href="#" class="main-screen__media-link">
-                            <img src="images/telegram.svg" alt="" href="#">
+                            <img src="../images/telegram.svg" href="#">
                         </a>
+                    </div>
+                    <div class="main-screen__arrows">
+                        <div class="main-screen__arrow-left"></div>
+                        <div class="main-screen__arrow-right"></div>
                     </div>
                 </div>
             </div>
@@ -301,7 +706,7 @@
             <div class="slider__item slider__item--first">
                 <div class="container">
                     <div class="first-slide__inner">
-                        <img class="first-slide__img" src="images/first-slide-img.svg" alt="airplane-icon">
+                        <img class="first-slide__img" src="../images/first-slide-img.svg" alt="airplane-icon">
                         <h2 class="first-slide__title">
                             Исследуй Страны
                         </h2>
@@ -316,7 +721,7 @@
                 <div class="container">
                     <div class="slider__inner">
                         <div class="slider__title">
-                            <br>
+                          
                             Турция
                         </div>
                         <p class="slider__text">
@@ -332,12 +737,13 @@
                             nostra, per inceptos himenaeos.
                         </p>
                         <button class="slider__btn">
-                            Узнать больше
+                            <a href="countries-turkey.html">Узнать больше</a>
+                            
                         </button>
                         <div class="slider__gallery">
                             <div class="slider__gallery-item active">
                                 <div class="slider__gallery-img-box dot-1">
-                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/turk-mini.avif" href="#">
                                     <span>
                                         Турция
                                     </span>
@@ -345,7 +751,7 @@
                             </div>
                             <div class="slider__gallery-item">
                                 <div class="slider__gallery-img-box dot-2">
-                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/bali-mini.avif" href="#">
                                     <span>
                                         Бали
                                     </span>
@@ -353,9 +759,9 @@
                             </div>
                             <div class="slider__gallery-item">
                                 <div class="slider__gallery-img-box dot-3">
-                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/emirates-mini.avif" href="#">
                                     <span>
-                                        Объединённые Арабские Эмираты
+                                        Дубай
                                     </span>
                                 </div>
                             </div>
@@ -368,7 +774,7 @@
                 <div class="container">
                     <div class="slider__inner">
                         <div class="slider__title">
-                            <br>
+                          
                             Бали
 
                         </div>
@@ -385,12 +791,12 @@
                             nostra, per inceptos himenaeos.
                         </p>
                         <button class="slider__btn">
-                            Узнать больше
+                            <a href="countries-bali.html">Узнать больше</a>
                         </button>
                         <div class="slider__gallery">
                             <div class="slider__gallery-item ">
                                 <div class="slider__gallery-img-box dot-1">
-                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/turk-mini.avif" href="#">
                                     <span>
                                         Турция
                                     </span>
@@ -398,7 +804,7 @@
                             </div>
                             <div class="slider__gallery-item active">
                                 <div class="slider__gallery-img-box  dot-2">
-                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/bali-mini.avif" href="#">
                                     <span>
                                         Бали
                                     </span>
@@ -406,9 +812,9 @@
                             </div>
                             <div class="slider__gallery-item">
                                 <div class="slider__gallery-img-box  dot-3">
-                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/emirates-mini.avif" href="#">
                                     <span>
-                                        Объединённые Арабские Эмираты
+                                        Дубай
                                     </span>
                                 </div>
                             </div>
@@ -421,7 +827,7 @@
                 <div class="container">
                     <div class="slider__inner">
                         <div class="slider__title">
-                            Объединённые Арабские Эмираты
+                            Дубай
                         </div>
                         <p class="slider__text">
                             Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
@@ -436,12 +842,12 @@
                             nostra, per inceptos himenaeos.
                         </p>
                         <button class="slider__btn">
-                            Узнать больше
+                            <a href="countries-dubai.html">Узнать больше</a>
                         </button>
                         <div class="slider__gallery">
                             <div class="slider__gallery-item">
                                 <div class="slider__gallery-img-box dot-1">
-                                    <img class="slider__gallery-img" src="images/turk-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/turk-mini.avif" href="#">
                                     <span>
                                         Турция
                                     </span>
@@ -449,7 +855,7 @@
                             </div>
                             <div class="slider__gallery-item">
                                 <div class="slider__gallery-img-box dot-2">
-                                    <img class="slider__gallery-img" src="images/bali-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/bali-mini.avif" href="#">
                                     <span>
                                         Бали
                                     </span>
@@ -457,9 +863,9 @@
                             </div>
                             <div class="slider__gallery-item active">
                                 <div class="slider__gallery-img-box dot-3">
-                                    <img class="slider__gallery-img" src="images/emirates-mini.avif" alt="" href="#">
+                                    <img class="slider__gallery-img" src="../images/emirates-mini.avif" href="#">
                                     <span>
-                                        Объединённые Арабские Эмираты
+                                        Дубай
                                     </span>
                                 </div>
                             </div>
@@ -479,200 +885,12 @@
                     турция
                 </h3>
             </div>
-
-            <div class="listings__box">
-                <!-- LISTING ITEMS -->
-                <div class="listings__item ">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-
-                <div class="listings__item">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-                <div class="listings__item">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-                <div class="listings__item">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-                <div class="listings__item">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-                <div class="listings__item">
-                    <div class="listings__item-img">
-                        <img src="images/listings-content.avif">
-                        <div class="listings__item-img-descr">
-                            <p class="listings__item-img-location">
-                                Турция , Алания
-                            </p>
-                            <p class="listings__item-img-date">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="listings__item-price">
-                        235 000 - 559 000
-                    </p>
-                    <p class="listings__item-text">
-                        Новые Роскошные Апартаменты
-                    </p>
-                    <p class="listings__item-type">
-                        Квартири
-                    </p>
-                    <p class="listings__item-rooms">
-                        1 спальня , 2 спальни , 2+1 пентхаус
-                    </p>
-                    <p class="listings__item-square">
-                        60 м - 170 м
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="listings__block">
-            <div class="listings-container">
-                <div class="container">
-                    <h3 class="listings__title listings__title--bali">
-                        Бали
-                    </h3>
-                </div>
+            <div class="container-fluid">
                 <div class="listings__box">
                     <!-- LISTING ITEMS -->
-                    <div class="listings__item">
+                    <div class="listings__item ">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -702,7 +920,195 @@
 
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listings__block">
+            <div class="container">
+                <h3 class="listings__title listings__title--bali">
+                    Бали
+                </h3>
+            </div>
+            <div class="container-fluid">
+                <div class="listings__box">
+                    <!-- LISTING ITEMS -->
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
+                            <div class="listings__item-img-descr">
+                                <p class="listings__item-img-location">
+                                    Турция , Алания
+                                </p>
+                                <p class="listings__item-img-date">
+                                    2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="listings__item-price">
+                            235 000 - 559 000
+                        </p>
+                        <p class="listings__item-text">
+                            Новые Роскошные Апартаменты
+                        </p>
+                        <p class="listings__item-type">
+                            Квартири
+                        </p>
+                        <p class="listings__item-rooms">
+                            1 спальня , 2 спальни , 2+1 пентхаус
+                        </p>
+                        <p class="listings__item-square">
+                            60 м - 170 м
+                        </p>
+                    </div>
+
+                    <div class="listings__item">
+                        <div class="listings__item-img">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -731,7 +1137,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -760,7 +1166,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -789,7 +1195,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -818,7 +1224,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -851,47 +1257,43 @@
         </div>
 
         <div class="container">
-            <form class="listings__form" method="POST">
-                <h4 class="listings__form-title">
+            <div class="contact-form-wrapper">
+                <h4 class="contact-form-title">
                     Хотите получить помощь в подборе недвижимости?
                 </h4>
-                <p class="listings__form-text">
+                <p class="contact-form-text">
                     Заполните короткую заявку и мы перезвоним вам в течение 1 часа
                 </p>
-                <div class="listings__form-input-inner">
-                    <div class="listings__form-input">
-                        <input type="text" placeholder="Ваше имя">
+                <form class="contact-form" method="POST">
+                    <div class="contact-form-input-inner">
+                        <input class="contact-form-input" type="text" placeholder="Ваше имя">
+                        <div class="contact-form-input-box">
+                            <input class="contact-form-input contact-form-input-number" type="number"
+                                placeholder="39 093 01903">
+                        </div>
+                        <input class="contact-form-input" type="email" placeholder="Почта">
                     </div>
-                    <div class="listings__form-input  listings__form-input-number">
-                        <input class="input-number" type="number" placeholder="39 093 01903">
-                    </div>
-                    <div class="listings__form-input">
-                        <input type="email" placeholder="Почта">
-                    </div>
-                </div>
-
-
-                <p class="listings__form-accept">
-                    Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно <a href="#"
-                        class="listings__form-text-link">Политики конфиденциальности компании</a>
-                </p>
-                <button class="listings__form-btn" type="submit">Заказать консультацию</button>
-            </form>
+                    <p class="contact-form-accept">
+                        Нажимая на кнопку, Вы соглашаетесь с обработкой ваших персональных данных согласно <a href="#"
+                            class="contact-form-text-link">Политики конфиденциальности компании</a>
+                    </p>
+                    <button class="contact-form-btn" type="submit">Заказать консультацию</button>
+                </form>
+            </div>
         </div>
 
         <div class="listings__block">
-            <div class="listings-container">
-                <div class="container">
-                    <h3 class="listings__title listings__title--emirates">
-                        Дубай
-                    </h3>
-                </div>
-
+            <div class="container">
+                <h3 class="listings__title listings__title--emirates">
+                    Дубай
+                </h3>
+            </div>
+            <div class="container-fluid">
                 <div class="listings__box">
                     <!-- LISTING ITEMS -->
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -921,7 +1323,7 @@
 
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -950,7 +1352,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -979,7 +1381,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -1008,7 +1410,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -1037,7 +1439,7 @@
                     </div>
                     <div class="listings__item">
                         <div class="listings__item-img">
-                            <img src="images/listings-content.avif">
+                            <img src="../images/listings-content.avif">
                             <div class="listings__item-img-descr">
                                 <p class="listings__item-img-location">
                                     Турция , Алания
@@ -1064,9 +1466,9 @@
                             60 м - 170 м
                         </p>
                     </div>
-
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- REVIEWS -->
@@ -1084,129 +1486,130 @@
                 Клиентов довольны покупкой недвижимости вместе с нами
             </p>
         </div>
-        <div class="reviews__slider">
-            <div class="reviews__item">
-                <div class="reviews__item-inner">
-                    <div class="reviews__item-stars">
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
+        <div class="container-fluid">
+            <div class="reviews__slider">
+                <div class="reviews__item">
+                    <div class="reviews__item-inner">
+                        <div class="reviews__item-stars">
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                        </div>
+                        <p class="reviews__item-text">
+                            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                            deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                            sint.
+                        </p>
+                        <img class="reviews__item-avatar" src="../images/reviews-avatar.avif">
+                        <p class="reviews__item-name">
+                            Van Nga <br>
+                            <span>
+                                CyberFin Co. Ltd
+                            </span>
+                        </p>
                     </div>
-                    <p class="reviews__item-text">
-                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
-                        sint.
-                    </p>
-                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
-                    <p class="reviews__item-name">
-                        Van Nga <br>
-                        <span>
-                            CyberFin Co. Ltd
-                        </span>
-                    </p>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-inner">
+                        <div class="reviews__item-stars">
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                        </div>
+                        <p class="reviews__item-text">
+                            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                            deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                            sint.
+                        </p>
+                        <img class="reviews__item-avatar" src="../images/reviews-avatar.avif">
+                        <p class="reviews__item-name">
+                            Van Nga <br>
+                            <span>
+                                CyberFin Co. Ltd
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-inner">
+                        <div class="reviews__item-stars">
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                        </div>
+                        <p class="reviews__item-text">
+                            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                            deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                            sint.
+                        </p>
+                        <img class="reviews__item-avatar" src="../images/reviews-avatar.avif">
+                        <p class="reviews__item-name">
+                            Van Nga <br>
+                            <span>
+                                CyberFin Co. Ltd
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-inner">
+                        <div class="reviews__item-stars">
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                        </div>
+                        <p class="reviews__item-text">
+                            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                            deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                            sint.
+                        </p>
+                        <img class="reviews__item-avatar" src="../images/reviews-avatar.avif">
+                        <p class="reviews__item-name">
+                            Van Nga <br>
+                            <span>
+                                CyberFin Co. Ltd
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-inner">
+                        <div class="reviews__item-stars">
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                            <div class="reviews__item-star"></div>
+                        </div>
+                        <p class="reviews__item-text">
+                            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
+                            deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
+                            sint.
+                        </p>
+                        <img class="reviews__item-avatar" src="../images/reviews-avatar.avif">
+                        <p class="reviews__item-name">
+                            Van Nga <br>
+                            <span>
+                                CyberFin Co. Ltd
+                            </span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="reviews__item">
-                <div class="reviews__item-inner">
-                    <div class="reviews__item-stars">
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                    </div>
-                    <p class="reviews__item-text">
-                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
-                        sint.
-                    </p>
-                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
-                    <p class="reviews__item-name">
-                        Van Nga <br>
-                        <span>
-                            CyberFin Co. Ltd
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__item-inner">
-                    <div class="reviews__item-stars">
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                    </div>
-                    <p class="reviews__item-text">
-                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
-                        sint.
-                    </p>
-                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
-                    <p class="reviews__item-name">
-                        Van Nga <br>
-                        <span>
-                            CyberFin Co. Ltd
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__item-inner">
-                    <div class="reviews__item-stars">
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                    </div>
-                    <p class="reviews__item-text">
-                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
-                        sint.
-                    </p>
-                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
-                    <p class="reviews__item-name">
-                        Van Nga <br>
-                        <span>
-                            CyberFin Co. Ltd
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews__item-inner">
-                    <div class="reviews__item-stars">
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                        <div class="reviews__item-star"></div>
-                    </div>
-                    <p class="reviews__item-text">
-                        Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis
-                        deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt
-                        sint.
-                    </p>
-                    <img class="reviews__item-avatar" src="images/reviews-avatar.avif">
-                    <p class="reviews__item-name">
-                        Van Nga <br>
-                        <span>
-                            CyberFin Co. Ltd
-                        </span>
-                    </p>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- ASSISTANCE BLOCK -->
 
-    <section class="assistance">
+    <section class="assistance" id="assistance">
         <div class="container">
             <div class="assistance__inner">
                 <div class="assistance__large-box">
@@ -1218,221 +1621,201 @@
                             Выберите один или несколько
                         </p>
                         <div class="assistance__form-inner">
-                            <form action="POST" class="assistance__form">
-                                <div class="assistance__form-step" id="step1">
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option1"
-                                            value="option1">
-                                        <label for="step1_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
+                            <form id="multiStepForm">
+                                <!-- Step 1-->
+                                <div class="step step1 active">
 
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option2"
-                                            value="option2">
-                                        <label for="step1_option2">Опция 2</label><br>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Sports
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
                                     <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step1_option3"
-                                            value="option3">
-                                        <label for="step1_option3">Опция 3</label><br>
+                                        <label class="assistance__form-container">Technology
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 1 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Travel
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>1 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
                                     <p class="assistance__form-text">
                                         Предлагаем помощь в подборе недвижимости зарубежом
                                     </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step1', 'step2')">Далее</button>
+                                    <button class="assistance__form-btn step1-btn">Next</button>
                                 </div>
 
-                                <div class="assistance__form-step" id="step2" style="display: none;">
+                                <!-- Step 2-->
+                                <div class="step step2">
                                     <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option1"
-                                            value="option1">
-                                        <label for="step2_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option2"
-                                            value="option2">
-                                        <label for="step2_option2">Опция 2</label><br>
+                                        <label class="assistance__form-container">Sports
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span></label>
                                     </div>
                                     <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step2_option3"
-                                            value="option3">
-                                        <label for="step2_option3">Опция 3</label><br>
+                                        <label class="assistance__form-container">Technology
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span></label>
                                     </div>
-
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 2 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Travel
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span></label>
                                     </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>2 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
                                     <p class="assistance__form-text">
                                         Предлагаем помощь в подборе недвижимости зарубежом
                                     </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step2', 'step3')">Далее</button>
+                                    <button class="assistance__form-btn step2-btn">Далее</button>
+                                </div>
+  
+                                <!-- Step 3-->
+                                <div class=" step step3">
+
+                                        <div class="assistance__form-step-box">
+                                            <label class="assistance__form-container">Sports
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="assistance__form-step-box">
+                                            <label class="assistance__form-container">Technology
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="assistance__form-step-box">
+                                            <label class="assistance__form-container">Travel
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <p class="assistance__form-progress-text">Шаг: <span>3 из 7</span></p>
+                                        <div class="assistance__form-progress-bar"></div>
+                                        <p class="assistance__form-text">
+                                            Предлагаем помощь в подборе недвижимости зарубежом
+                                        </p>
+                                        <button class="assistance__form-btn step3-btn">Далее</button>
+                                </div>
+                                <!-- Step 4-->
+                                <div class="step step4">
+
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Sports
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Technology
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Travel
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>4 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn step4-btn">Далее</button>
+                                </div>
+                                <!-- Step 5-->
+                                <div class="step step5">
+
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Sports
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Technology
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Travel
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>5 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn step5-btn">Далее</button>
+                                </div>
+                                <!-- Step 6-->
+                                <div class="step step6">
+
+
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Sports
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Technology
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="assistance__form-step-box">
+                                        <label class="assistance__form-container">Travel
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>6 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
+                                    <p class="assistance__form-text">
+                                        Предлагаем помощь в подборе недвижимости зарубежом
+                                    </p>
+                                    <button class="assistance__form-btn step6-btn">Далее</button>
                                 </div>
 
-                                <div class="assistance__form-step" id="step3" style="display: none;">
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option1"
-                                            value="option1">
-                                        <label for="step3_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
+                                <!-- Step 7-->
+                                <div class="step step7">
 
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option2"
-                                            value="option2">
-                                        <label for="step3_option2">Опция 2</label><br>
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-step-input" type="text" placeholder="Name"
+                                            required>
                                     </div>
                                     <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step3_option3"
-                                            value="option3">
-                                        <label for="step3_option3">Опция 3</label><br>
+                                        <input class="assistance__form-step-input" type="tel" placeholder="Telephone"
+                                            required>
                                     </div>
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 3 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
+                                    <div class="assistance__form-step-box">
+                                        <input class="assistance__form-step-input" type="email" placeholder="E-mail"
+                                            required>
                                     </div>
+                                    <p class="assistance__form-progress-text">Шаг: <span>7 из 7</span></p>
+                                    <div class="assistance__form-progress-bar"></div>
                                     <p class="assistance__form-text">
                                         Предлагаем помощь в подборе недвижимости зарубежом
                                     </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step3', 'step4')">Далее</button>
-                                </div>
-
-                                <div class="assistance__form-step" id="step4" style="display: none;">
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option1"
-                                            value="option1">
-                                        <label for="step4_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option2"
-                                            value="option2">
-                                        <label for="step4_option2">Опция 2</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step4_option3"
-                                            value="option3">
-                                        <label for="step4_option3">Опция 3</label><br>
-                                    </div>
-
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 4 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
-                                    </div>
-                                    <p class="assistance__form-text">
-                                        Предлагаем помощь в подборе недвижимости зарубежом
-                                    </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step4', 'step5')">Далее</button>
-                                </div>
-
-                                <div class="assistance__form-step" id="step5" style="display: none;">
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option1"
-                                            value="option1">
-                                        <label for="step5_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option2"
-                                            value="option2">
-                                        <label for="step5_option2">Опция 2</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step5_option3"
-                                            value="option3">
-                                        <label for="step5_option3">Опция 3</label><br>
-                                    </div>
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 5 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
-                                    </div>
-                                    <p class="assistance__form-text">
-                                        Предлагаем помощь в подборе недвижимости зарубежом
-                                    </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step5', 'step6')">Далее</button>
-                                </div>
-                                <div class="assistance__form-step" id="step6" style="display: none;">
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option1"
-                                            value="option1">
-                                        <label for="step6_option1">Опция 1</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option2"
-                                            value="option2">
-                                        <label for="step6_option2">Опция 2</label><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input class="assistance__form-checkbox" type="checkbox" name="step6_option3"
-                                            value="option3">
-                                        <label for="step6_option3">Опция 3</label><br>
-                                    </div>
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 6 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
-                                    </div>
-                                    <p class="assistance__form-text">
-                                        Предлагаем помощь в подборе недвижимости зарубежом
-                                    </p>
-                                    <button class="assistance__form-btn" type="button" onclick="nextStep('step6', 'step7')">Далее</button>
-                                </div>
-
-                                <div class="assistance__form-step" id="step7" style="display: none;">
-                                    <div class="assistance__form-step-box">
-                                        <input type="text" name="name" id="name" required placeholder="Имя:"><br>
-                                    </div>
-                                    <div class="assistance__form-step-box">
-
-                                        <input type="text" name="number" id="number" required placeholder="Номер:"><br>
-                                    </div>
-
-                                    <div class="assistance__form-progress">
-                                        <p class="assistance__form-progress-text">
-                                            Готово:
-                                            <span> 7 из 7</span>
-                                        </p>
-                                        <div class="assistance__form-progress-bar"></div>
-                                        
-                                    </div>
-                                    <p class="assistance__form-text">
-                                        Предлагаем помощь в подборе недвижимости зарубежом
-                                    </p>
-                                    <button class="assistance__form-btn" type="submit">Отправить</button>
+                                    <button class="assistance__form-btn" type="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
+
+
 
 
                     </div>
@@ -1455,7 +1838,7 @@
             <a class="logo" href="#">
 
 
-                <img class="logo__img" src="images/logo.svg" alt="sqft-logo">
+                <img class="logo__img" src="../images/logo.svg" alt="sqft-logo">
 
 
                 <h1 class="logo__text">
@@ -1473,7 +1856,7 @@
             <div class="footer__media">
 
 
-                <a class="footer__media-link" href="#"><img class="footer__media-icon" src="images/youtube-b.svg"
+                <a class="footer__media-link" href="#"><img class="footer__media-icon" src="../images/youtube-b.svg"
 
 
                         href="#" alt="media-icon">
@@ -1482,34 +1865,34 @@
                 </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
 
 
-                        src="images/pinterest-b.svg" href="#" alt="media-icon">
+                        src="../images/pinterest-b.svg" href="#" alt="media-icon">
 
 
                 </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
 
 
-                        src="images/video-chat-b.svg" href="#" alt="media-icon ">
+                        src="../images/video-chat-b.svg" href="#" alt="media-icon ">
 
 
                 </a> <a class="footer__media-link" href ="#"><img class="footer__media-icon"
 
 
-                        src="images/telegram-b.svg" href="#" alt="media-icon">
+                        src="../images/telegram-b.svg" href="#" alt="media-icon">
 
 
                 </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
 
 
-                        src="images/facebook-b.svg" href="#" alt="media-icon">
+                        src="../images/facebook-b.svg" href="#" alt="media-icon">
 
 
                 </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
 
 
-                        src="images/instagram-b.svg" href="#" alt="media-icon">
+                        src="../images/instagram-b.svg" href="#" alt="media-icon">
 
 
-                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon" src="images/tiktok-b.svg"
+                </a> <a class="footer__media-link" href="#"><img class="footer__media-icon" src="../images/tiktok-b.svg"
 
 
                         href="#" alt="media-icon">
@@ -1518,7 +1901,7 @@
                 </a> <a class="footer__media-link" href="#"><img class="footer__media-icon"
 
 
-                        src="images/whatsapp-b.svg" href="#" alt="media-icon">
+                        src="../images/whatsapp-b.svg" href="#" alt="media-icon">
 
 
                 </a>
