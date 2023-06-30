@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-about-icon-1-dims { width: 32px; height: 32px; }
+ .svg-about-icon-2-dims { width: 32px; height: 32px; }
+ .svg-about-icon-3-dims { width: 32px; height: 32px; }
+ .svg-about-icon-4-dims { width: 32px; height: 32px; }
+ .svg-about-icon-5-dims { width: 32px; height: 32px; }
+ .svg-about-icon-6-dims { width: 32px; height: 32px; }
+ .svg-arrow-next-dims { width: 22px; height: 31px; }
+ .svg-arrow-prev-dims { width: 22px; height: 31px; }
+ .svg-bali-icon-dims { width: 66px; height: 54px; }
+ .svg-chat-dims { width: 32px; height: 32px; }
+ .svg-close-btn-dims { width: 32px; height: 32px; }
+ .svg-contacts_location-dims { width: 32px; height: 33px; }
+ .svg-docs-icon-dims { width: 32px; height: 43px; }
+ .svg-emirates-icon-dims { width: 66px; height: 54px; }
+ .svg-euro-dims { width: 21px; height: 22px; }
+ .svg-facebook-dims { width: 32px; height: 33px; }
+ .svg-facebook-b-dims { width: 32px; height: 33px; }
+ .svg-first-slide-img-dims { width: 95px; height: 95px; }
+ .svg-footer-email-dims { width: 35px; height: 36px; }
+ .svg-footer-location-dims { width: 34px; height: 35px; }
+ .svg-footer-phone-dims { width: 35px; height: 36px; }
+ .svg-instagram-dims { width: 32px; height: 32px; }
+ .svg-instagram-b-dims { width: 32px; height: 33px; }
+ .svg-instagram-biruz-dims { width: 32px; height: 32px; }
+ .svg-investing-icon-dims { width: 64px; height: 63px; }
+ .svg-key-b-dims { width: 80px; height: 80px; }
+ .svg-key-icon-dims { width: 63px; height: 63px; }
+ .svg-listing-details-location-dims { width: 25px; height: 32px; }
+ .svg-listing-details-location-b-dims { width: 25px; height: 32px; }
+ .svg-listing-location-dims { width: 17px; height: 21px; }
+ .svg-listing-room-dims { width: 30px; height: 30px; }
+ .svg-listing-room-b-dims { width: 32px; height: 33px; }
+ .svg-listing-square-dims { width: 33px; height: 34px; }
+ .svg-listing-square-b-dims { width: 32px; height: 33px; }
+ .svg-listing-type-dims { width: 29px; height: 30px; }
+ .svg-listing-type-b-dims { width: 32px; height: 33px; }
+ .svg-logo-dims { width: 70px; height: 70px; }
+ .svg-loupe-dims { width: 32px; height: 32px; }
+ .svg-online-view-star-icon-dims { width: 32px; height: 33px; }
+ .svg-picture-icon-dims { width: 63px; height: 65px; }
+ .svg-pinterest-dims { width: 32px; height: 33px; }
+ .svg-pinterest-b-dims { width: 32px; height: 33px; }
+ .svg-quote-dims { width: 54px; height: 51px; }
+ .svg-remote-buy-icon-1-dims { width: 33px; height: 32px; }
+ .svg-remote-buy-icon-2-dims { width: 32px; height: 32px; }
+ .svg-remote-buy-icon-3-dims { width: 33px; height: 32px; }
+ .svg-remote-buy-icon-4-dims { width: 33px; height: 32px; }
+ .svg-resident-card-icon-dims { width: 64px; height: 63px; }
+ .svg-screen-arrow-left-dims { width: 16px; height: 27px; }
+ .svg-screen-arrow-right-dims { width: 16px; height: 27px; }
+ .svg-shoping-icon-dims { width: 63px; height: 63px; }
+ .svg-slider-chat-dims { width: 32px; height: 32px; }
+ .svg-slider-whatsapp-dims { width: 32px; height: 32px; }
+ .svg-star-dims { width: 34px; height: 33px; }
+ .svg-telegram-dims { width: 32px; height: 32px; }
+ .svg-telegram-b-dims { width: 32px; height: 33px; }
+ .svg-telegram-biruz-dims { width: 32px; height: 32px; }
+ .svg-tiktok-dims { width: 32px; height: 33px; }
+ .svg-tiktok-b-dims { width: 32px; height: 33px; }
+ .svg-tour-step-1-dims { width: 32px; height: 32px; }
+ .svg-tour-step-2-dims { width: 32px; height: 32px; }
+ .svg-tour-step-3-dims { width: 32px; height: 32px; }
+ .svg-tour-step-4-dims { width: 32px; height: 32px; }
+ .svg-turk-icon-dims { width: 66px; height: 54px; }
+ .svg-turkey-tour-icon-dims { width: 88px; height: 71px; }
+ .svg-ua-flag-dims { width: 25px; height: 16px; }
+ .svg-video-chat-b-dims { width: 32px; height: 33px; }
+ .svg-whatsapp-dims { width: 32px; height: 32px; }
+ .svg-whatsapp-b-dims { width: 32px; height: 33px; }
+ .svg-youtube-dims { width: 32px; height: 32px; }
+ .svg-youtube-b-dims { width: 32px; height: 33px; }
+ .svg-youtube-biruz-dims { width: 32px; height: 32px; }
+ .svg-сheck-mark-dims { width: 28px; height: 18px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="about-icon-1">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-1" class="svg-about-icon-1-dims" alt="about-icon-1">
+                    </div>
+                    <h2>about-icon-1, </h2>
+                </li>
+             <li title="about-icon-2">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-2" class="svg-about-icon-2-dims" alt="about-icon-2">
+                    </div>
+                    <h2>about-icon-2, </h2>
+                </li>
+             <li title="about-icon-3">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-3" class="svg-about-icon-3-dims" alt="about-icon-3">
+                    </div>
+                    <h2>about-icon-3, </h2>
+                </li>
+             <li title="about-icon-4">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-4" class="svg-about-icon-4-dims" alt="about-icon-4">
+                    </div>
+                    <h2>about-icon-4, </h2>
+                </li>
+             <li title="about-icon-5">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-5" class="svg-about-icon-5-dims" alt="about-icon-5">
+                    </div>
+                    <h2>about-icon-5, </h2>
+                </li>
+             <li title="about-icon-6">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#about-icon-6" class="svg-about-icon-6-dims" alt="about-icon-6">
+                    </div>
+                    <h2>about-icon-6, </h2>
+                </li>
+             <li title="arrow-next">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arrow-next" class="svg-arrow-next-dims" alt="arrow-next">
+                    </div>
+                    <h2>arrow-next, </h2>
+                </li>
+             <li title="arrow-prev">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arrow-prev" class="svg-arrow-prev-dims" alt="arrow-prev">
+                    </div>
+                    <h2>arrow-prev, </h2>
+                </li>
+             <li title="bali-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#bali-icon" class="svg-bali-icon-dims" alt="bali-icon">
+                    </div>
+                    <h2>bali-icon, </h2>
+                </li>
+             <li title="chat">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chat" class="svg-chat-dims" alt="chat">
+                    </div>
+                    <h2>chat, </h2>
+                </li>
+             <li title="close-btn">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#close-btn" class="svg-close-btn-dims" alt="close-btn">
+                    </div>
+                    <h2>close-btn, </h2>
+                </li>
+             <li title="contacts_location">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#contacts_location" class="svg-contacts_location-dims" alt="contacts_location">
+                    </div>
+                    <h2>contacts_location, </h2>
+                </li>
+             <li title="docs-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#docs-icon" class="svg-docs-icon-dims" alt="docs-icon">
+                    </div>
+                    <h2>docs-icon, </h2>
+                </li>
+             <li title="emirates-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#emirates-icon" class="svg-emirates-icon-dims" alt="emirates-icon">
+                    </div>
+                    <h2>emirates-icon, </h2>
+                </li>
+             <li title="euro">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#euro" class="svg-euro-dims" alt="euro">
+                    </div>
+                    <h2>euro, </h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#facebook" class="svg-facebook-dims" alt="facebook">
+                    </div>
+                    <h2>facebook, </h2>
+                </li>
+             <li title="facebook-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#facebook-b" class="svg-facebook-b-dims" alt="facebook-b">
+                    </div>
+                    <h2>facebook-b, </h2>
+                </li>
+             <li title="first-slide-img">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#first-slide-img" class="svg-first-slide-img-dims" alt="first-slide-img">
+                    </div>
+                    <h2>first-slide-img, </h2>
+                </li>
+             <li title="footer-email">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#footer-email" class="svg-footer-email-dims" alt="footer-email">
+                    </div>
+                    <h2>footer-email, </h2>
+                </li>
+             <li title="footer-location">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#footer-location" class="svg-footer-location-dims" alt="footer-location">
+                    </div>
+                    <h2>footer-location, </h2>
+                </li>
+             <li title="footer-phone">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#footer-phone" class="svg-footer-phone-dims" alt="footer-phone">
+                    </div>
+                    <h2>footer-phone, </h2>
+                </li>
+             <li title="instagram">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#instagram" class="svg-instagram-dims" alt="instagram">
+                    </div>
+                    <h2>instagram, </h2>
+                </li>
+             <li title="instagram-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#instagram-b" class="svg-instagram-b-dims" alt="instagram-b">
+                    </div>
+                    <h2>instagram-b, </h2>
+                </li>
+             <li title="instagram-biruz">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#instagram-biruz" class="svg-instagram-biruz-dims" alt="instagram-biruz">
+                    </div>
+                    <h2>instagram-biruz, </h2>
+                </li>
+             <li title="investing-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#investing-icon" class="svg-investing-icon-dims" alt="investing-icon">
+                    </div>
+                    <h2>investing-icon, </h2>
+                </li>
+             <li title="key-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#key-b" class="svg-key-b-dims" alt="key-b">
+                    </div>
+                    <h2>key-b, </h2>
+                </li>
+             <li title="key-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#key-icon" class="svg-key-icon-dims" alt="key-icon">
+                    </div>
+                    <h2>key-icon, </h2>
+                </li>
+             <li title="listing-details-location">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-details-location" class="svg-listing-details-location-dims" alt="listing-details-location">
+                    </div>
+                    <h2>listing-details-location, </h2>
+                </li>
+             <li title="listing-details-location-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-details-location-b" class="svg-listing-details-location-b-dims" alt="listing-details-location-b">
+                    </div>
+                    <h2>listing-details-location-b, </h2>
+                </li>
+             <li title="listing-location">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-location" class="svg-listing-location-dims" alt="listing-location">
+                    </div>
+                    <h2>listing-location, </h2>
+                </li>
+             <li title="listing-room">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-room" class="svg-listing-room-dims" alt="listing-room">
+                    </div>
+                    <h2>listing-room, </h2>
+                </li>
+             <li title="listing-room-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-room-b" class="svg-listing-room-b-dims" alt="listing-room-b">
+                    </div>
+                    <h2>listing-room-b, </h2>
+                </li>
+             <li title="listing-square">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-square" class="svg-listing-square-dims" alt="listing-square">
+                    </div>
+                    <h2>listing-square, </h2>
+                </li>
+             <li title="listing-square-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-square-b" class="svg-listing-square-b-dims" alt="listing-square-b">
+                    </div>
+                    <h2>listing-square-b, </h2>
+                </li>
+             <li title="listing-type">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-type" class="svg-listing-type-dims" alt="listing-type">
+                    </div>
+                    <h2>listing-type, </h2>
+                </li>
+             <li title="listing-type-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#listing-type-b" class="svg-listing-type-b-dims" alt="listing-type-b">
+                    </div>
+                    <h2>listing-type-b, </h2>
+                </li>
+             <li title="logo">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#logo" class="svg-logo-dims" alt="logo">
+                    </div>
+                    <h2>logo, </h2>
+                </li>
+             <li title="loupe">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#loupe" class="svg-loupe-dims" alt="loupe">
+                    </div>
+                    <h2>loupe, </h2>
+                </li>
+             <li title="online-view-star-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#online-view-star-icon" class="svg-online-view-star-icon-dims" alt="online-view-star-icon">
+                    </div>
+                    <h2>online-view-star-icon, </h2>
+                </li>
+             <li title="picture-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#picture-icon" class="svg-picture-icon-dims" alt="picture-icon">
+                    </div>
+                    <h2>picture-icon, </h2>
+                </li>
+             <li title="pinterest">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#pinterest" class="svg-pinterest-dims" alt="pinterest">
+                    </div>
+                    <h2>pinterest, </h2>
+                </li>
+             <li title="pinterest-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#pinterest-b" class="svg-pinterest-b-dims" alt="pinterest-b">
+                    </div>
+                    <h2>pinterest-b, </h2>
+                </li>
+             <li title="quote">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#quote" class="svg-quote-dims" alt="quote">
+                    </div>
+                    <h2>quote, </h2>
+                </li>
+             <li title="remote-buy-icon-1">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#remote-buy-icon-1" class="svg-remote-buy-icon-1-dims" alt="remote-buy-icon-1">
+                    </div>
+                    <h2>remote-buy-icon-1, </h2>
+                </li>
+             <li title="remote-buy-icon-2">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#remote-buy-icon-2" class="svg-remote-buy-icon-2-dims" alt="remote-buy-icon-2">
+                    </div>
+                    <h2>remote-buy-icon-2, </h2>
+                </li>
+             <li title="remote-buy-icon-3">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#remote-buy-icon-3" class="svg-remote-buy-icon-3-dims" alt="remote-buy-icon-3">
+                    </div>
+                    <h2>remote-buy-icon-3, </h2>
+                </li>
+             <li title="remote-buy-icon-4">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#remote-buy-icon-4" class="svg-remote-buy-icon-4-dims" alt="remote-buy-icon-4">
+                    </div>
+                    <h2>remote-buy-icon-4, </h2>
+                </li>
+             <li title="resident-card-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#resident-card-icon" class="svg-resident-card-icon-dims" alt="resident-card-icon">
+                    </div>
+                    <h2>resident-card-icon, </h2>
+                </li>
+             <li title="screen-arrow-left">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#screen-arrow-left" class="svg-screen-arrow-left-dims" alt="screen-arrow-left">
+                    </div>
+                    <h2>screen-arrow-left, </h2>
+                </li>
+             <li title="screen-arrow-right">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#screen-arrow-right" class="svg-screen-arrow-right-dims" alt="screen-arrow-right">
+                    </div>
+                    <h2>screen-arrow-right, </h2>
+                </li>
+             <li title="shoping-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#shoping-icon" class="svg-shoping-icon-dims" alt="shoping-icon">
+                    </div>
+                    <h2>shoping-icon, </h2>
+                </li>
+             <li title="slider-chat">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#slider-chat" class="svg-slider-chat-dims" alt="slider-chat">
+                    </div>
+                    <h2>slider-chat, </h2>
+                </li>
+             <li title="slider-whatsapp">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#slider-whatsapp" class="svg-slider-whatsapp-dims" alt="slider-whatsapp">
+                    </div>
+                    <h2>slider-whatsapp, </h2>
+                </li>
+             <li title="star">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#star" class="svg-star-dims" alt="star">
+                    </div>
+                    <h2>star, </h2>
+                </li>
+             <li title="telegram">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#telegram" class="svg-telegram-dims" alt="telegram">
+                    </div>
+                    <h2>telegram, </h2>
+                </li>
+             <li title="telegram-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#telegram-b" class="svg-telegram-b-dims" alt="telegram-b">
+                    </div>
+                    <h2>telegram-b, </h2>
+                </li>
+             <li title="telegram-biruz">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#telegram-biruz" class="svg-telegram-biruz-dims" alt="telegram-biruz">
+                    </div>
+                    <h2>telegram-biruz, </h2>
+                </li>
+             <li title="tiktok">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tiktok" class="svg-tiktok-dims" alt="tiktok">
+                    </div>
+                    <h2>tiktok, </h2>
+                </li>
+             <li title="tiktok-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tiktok-b" class="svg-tiktok-b-dims" alt="tiktok-b">
+                    </div>
+                    <h2>tiktok-b, </h2>
+                </li>
+             <li title="tour-step-1">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tour-step-1" class="svg-tour-step-1-dims" alt="tour-step-1">
+                    </div>
+                    <h2>tour-step-1, </h2>
+                </li>
+             <li title="tour-step-2">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tour-step-2" class="svg-tour-step-2-dims" alt="tour-step-2">
+                    </div>
+                    <h2>tour-step-2, </h2>
+                </li>
+             <li title="tour-step-3">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tour-step-3" class="svg-tour-step-3-dims" alt="tour-step-3">
+                    </div>
+                    <h2>tour-step-3, </h2>
+                </li>
+             <li title="tour-step-4">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tour-step-4" class="svg-tour-step-4-dims" alt="tour-step-4">
+                    </div>
+                    <h2>tour-step-4, </h2>
+                </li>
+             <li title="turk-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#turk-icon" class="svg-turk-icon-dims" alt="turk-icon">
+                    </div>
+                    <h2>turk-icon, </h2>
+                </li>
+             <li title="turkey-tour-icon">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#turkey-tour-icon" class="svg-turkey-tour-icon-dims" alt="turkey-tour-icon">
+                    </div>
+                    <h2>turkey-tour-icon, </h2>
+                </li>
+             <li title="ua-flag">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#ua-flag" class="svg-ua-flag-dims" alt="ua-flag">
+                    </div>
+                    <h2>ua-flag, </h2>
+                </li>
+             <li title="video-chat-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#video-chat-b" class="svg-video-chat-b-dims" alt="video-chat-b">
+                    </div>
+                    <h2>video-chat-b, </h2>
+                </li>
+             <li title="whatsapp">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#whatsapp" class="svg-whatsapp-dims" alt="whatsapp">
+                    </div>
+                    <h2>whatsapp, </h2>
+                </li>
+             <li title="whatsapp-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#whatsapp-b" class="svg-whatsapp-b-dims" alt="whatsapp-b">
+                    </div>
+                    <h2>whatsapp-b, </h2>
+                </li>
+             <li title="youtube">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#youtube" class="svg-youtube-dims" alt="youtube">
+                    </div>
+                    <h2>youtube, </h2>
+                </li>
+             <li title="youtube-b">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#youtube-b" class="svg-youtube-b-dims" alt="youtube-b">
+                    </div>
+                    <h2>youtube-b, </h2>
+                </li>
+             <li title="youtube-biruz">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#youtube-biruz" class="svg-youtube-biruz-dims" alt="youtube-biruz">
+                    </div>
+                    <h2>youtube-biruz, </h2>
+                </li>
+             <li title="сheck-mark">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#сheck-mark" class="svg-сheck-mark-dims" alt="сheck-mark">
+                    </div>
+                    <h2>сheck-mark, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Sun, 25 Jun 2023 11:44:57 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
